@@ -1,10 +1,13 @@
-.stop-watch {
-  margin-left: 45%;
-  margin-top: 20%;
-  margin-right: 39%;
+.content {
+  width: 100vh;
+  height: 100vh;
 }
 
-#watch {
+.stop-watch {
+  margin: 30% 40%;
+}
+
+.watch {
   width: 200px;
   height: 200px;
   border-radius: 100px;
@@ -12,13 +15,14 @@
   background-color: rgba(168, 179, 196, 0.5);
 }
 
-#start-btn {
+.start-btn {
   margin-top: 10px;
   float: left;
 }
 
-#timer {
+.timer {
+  position: relative;
   font-family: 'Orbitron', sans-serif;
-  margin: 90px 70px auto 70px;
+  margin: 45% 40%;
   font-size: 20px;
 }

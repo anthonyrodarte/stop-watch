@@ -1,24 +1,22 @@
 /* eslint-disable no-unused-vars */
-var start = document.querySelector('#start-btn')
-var time = document.querySelector('#timer')
 
-var sec = 0, min = 0, hour = 0
+var startButton = document.querySelector('button.start')
+startButton.addEventListener('click', function () {
+  var timer = {
+    seconds: 0
+  }
+  startTimer(timer, document.querySelector('p.timer'))
+})
 
-start.addEventListener('click', timer)
-
-function timer () {
-  i = setInterval(count, 1000)
+function startTimer(timer, location) {
+  setInterval(function() {
+    timer.seconds++
+    location.textContent = readTime(timer)
+  }, 1000)
 }
 
-function count() {
-  sec++
-  if (sec == 60) {
-    sec = 0
-    min++
-    if (min == 60) {
-      min = 0
-      hour++
-    }
-  }
-  time.textContent = hour + ':' + min + ':' + sec
+function readTime(timePassed) {
+  var minutes = Math.floor(timePassed.seconds / 60)
+  var seconds = timePassed.seconds - minutes * 60
+  return minutes + ':' + seconds
 }
