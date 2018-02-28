@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 
 var startButton = document.querySelector('button.start')
+var pauseButton = document.querySelector('button.pause')
+var interval
+
 startButton.addEventListener('click', function () {
   var timer = {
     seconds: 0
@@ -8,8 +11,12 @@ startButton.addEventListener('click', function () {
   startTimer(timer, document.querySelector('p.timer'))
 })
 
+pauseButton.addEventListener('click', function() {
+  clearInterval(interval)
+})
+
 function startTimer(timer, location) {
-  setInterval(function() {
+  interval = setInterval(function() {
     timer.seconds++
     location.textContent = readTime(timer)
   }, 1000)
