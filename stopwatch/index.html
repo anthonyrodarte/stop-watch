@@ -7,15 +7,20 @@
     <title>Stop Watch</title>
   </head>
   <body>
-    <div class="content">
-      <div class="stop-watch">
-        <h1>STOPWATCH</h1>
-        <div class="watch">
-          <p class="timer">0:0</p>
+    <div class="background">
+      <div class="content">
+        <div class="stop-watch">
+          <h1>STOPWATCH</h1>
+          <div class="watch">
+            <p class="timer">0:0</p>
+          </div>
+          <button class="start">Start!</button>
+          <button class="pause">Pause</button>
+          <button class="reset">Reset</button>
+          <input type="range" min="1" max="1000" value="1000" class="slider">
+          <h5>Current Limit In Seconds</h5>
+          <input type="text" class="textInput" value="" placeholder="UP TO 1000">
         </div>
-        <button class="start">Start!</button>
-        <button class="pause">Pause</button>
-        <button class="reset">Reset</button>
       </div>
     </div>
     <script src="main.js"></script>
