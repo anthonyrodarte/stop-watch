@@ -27,7 +27,6 @@ slide.addEventListener('change', function(event) {
   var limit = Number(newValue)
   document.querySelector('input.textInput').value = newValue
   limitTime(limit)
-  console.log(limit)
 })
 
 input.addEventListener('change', function(event) {
@@ -35,7 +34,6 @@ input.addEventListener('change', function(event) {
   var limit = Number(newValue)
   document.querySelector('input.slider').value = newValue
   limitTime(limit)
-  console.log(limit)
 })
 
 function startTimer(timer, location) {
